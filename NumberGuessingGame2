@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class NumberGuessingGame2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int number = 42; // правильне число
+        int userGuess;
+
+        System.out.println("Welcome to the Number Guessing Game!");
+
+        // цикл для повторних спроб, поки користувач не вгадає число
+        while (true) {
+            System.out.print("Enter your guess: ");
+            userGuess = scanner.nextInt();
+
+            if (userGuess < number) {
+                System.out.println("Too low! Try again.");
+            } else if (userGuess > number) {
+                System.out.println("Too high! Try again.");
+            } else {
+                // користувач вгадав число
+                break;
+            }
+        }
+
+        System.out.println("Congratulations! You guessed the correct number: " + number);
+        scanner.close();
+    }
+}
