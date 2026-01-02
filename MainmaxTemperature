@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class MainmaxTemperature {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int maxTemperature = 0; // максимальна температура
+
+        while (true) {
+            int temp = scanner.nextInt();
+
+            if (temp >= 100) {
+                break;
+            }
+
+            if (temp > maxTemperature) {
+                maxTemperature = temp;
+            }
+        }
+
+        System.out.println(maxTemperature);
+        scanner.close();
+    }
+}
