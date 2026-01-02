@@ -1,0 +1,19 @@
+public class mainWhile {
+    public static void main(String[] args) {
+        int i = 1; // лічильник для while
+
+        while (i <= 10) {
+            if (i == 5) {
+                i++;        // збільшуємо, щоб не застрягти
+                continue;   // пропускаємо 5
+            }
+
+            if (i == 8) {
+                break;      // зупиняємо цикл, коли i = 8
+            }
+
+            System.out.println("Number: " + i);
+            i++;            // збільшуємо лічильник
+        }
+    }
+}
