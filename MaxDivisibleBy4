@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class MaxDivisibleBy4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt(); // перше число — кількість елементів послідовності
+        int maxDiv4 = 0;           // змінна для зберігання максимального числа, що ділиться на 4
+
+        int i = 0; // лічильник ітерацій
+        while (i < n) {
+            int num = scanner.nextInt(); // читаємо наступне число послідовності
+
+            // перевіряємо, чи ділиться на 4
+            if (num % 4 == 0) {
+                if (num > maxDiv4) {
+                    maxDiv4 = num; // оновлюємо максимум
+                }
+            }
+
+            i++; // переходимо до наступного числа
+        }
+
+        System.out.println(maxDiv4);
+        scanner.close();
+    }
+}
