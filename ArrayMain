@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ArrayMain {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Зчитуємо розмір масиву
+        int size = scanner.nextInt();
+
+        // Створюємо масив
+        int[] array = new int[size];
+
+        // Зчитуємо елементи масиву
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        // Зчитуємо числа n та m
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+
+        boolean found = false;
+
+        // Перевіряємо сусідні елементи
+        for (int i = 0; i < size - 1; i++) {
+            if ((array[i] == n && array[i + 1] == m) ||
+                (array[i] == m && array[i + 1] == n)) {
+                found = true;
+                break;
+            }
+        }
+
+        // Виводимо результат
+        System.out.println(found);
+    }
+}
