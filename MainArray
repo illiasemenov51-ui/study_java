@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class MainArray {
+    public static void main(String[] args) {
+        // put your code here
+        Scanner scanner = new Scanner(System.in);
+
+        int size = scanner.nextInt();
+
+        int[] number = new int[size];
+        for(int i = 0; i < size; i++){
+            number[i] = scanner.nextInt();
+        }
+        int max = number[0];
+        int maxIndex = 0;
+        
+        for(int i = 1 ; i < size ; i++){
+           if(number[i] > max){
+               max = number[i];
+                maxIndex = i;
+               
+            }
+        }
+        System.out.println(maxIndex);
+    }
+}
