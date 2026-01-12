@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        int[][] hall = new int[n][m];
+
+        // Read the cinema seating
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                hall[i][j] = sc.nextInt();
+            }
+        }
+
+        int k = sc.nextInt();
+
+        // Check each row
+        for (int i = 0; i < n; i++) {
+            int freeCount = 0;
+
+            for (int j = 0; j < m; j++) {
+                if (hall[i][j] == 0) {
+                    freeCount++;
+                    if (freeCount == k) {
+                        System.out.println(i + 1); // rows are 1-based
+                        return;
+                    }
+                } else {
+                    freeCount = 0;
+                }
+            }
+        }
+
+        // If no suitable row found
+        System.out.println(0);
+    }
+}
