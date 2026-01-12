@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String date = scanner.nextLine();
+
+        // Split the date by "-"
+        String[] parts = date.split("-");
+
+        // Rearrange and print as MM/DD/YYYY
+        System.out.println(parts[1] + "/" + parts[2] + "/" + parts[0]);
+    }
+}
