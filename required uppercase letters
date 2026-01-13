@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int A = scanner.nextInt(); // uppercase
+        int B = scanner.nextInt(); // lowercase
+        int C = scanner.nextInt(); // digits
+        int N = scanner.nextInt(); // total length
+
+        StringBuilder password = new StringBuilder();
+        char last = 0;
+
+        // 1. Add required uppercase letters
+        for (int i = 0; i < A; i++) {
+            char ch = (last == 'A') ? 'B' : 'A';
+            password.append(ch);
+            last = ch;
+        }
+
+        // 2. Add required lowercase letters
+        for (int i = 0; i < B; i++) {
+            char ch = (last == 'a') ? 'b' : 'a';
+            password.append(ch);
+            last = ch;
+        }
+
+        // 3. Add required digits
+        for (int i = 0; i < C; i++) {
+            char ch = (last == '1') ? '2' : '1';
+            password.append(ch);
+            last = ch;
+        }
+
+        // 4. Fill remaining characters
+        while (password.length() < N) {
+            char ch;
+            if (last != 'A') ch = 'A';
+            else if (last != 'a') ch = 'a';
+            else ch = '1';
+
+            password.append(ch);
+            last = ch;
+        }
+
+        System.out.println(password.toString());
+    }
+}
