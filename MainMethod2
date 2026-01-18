@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class MainMethod2 {
+
+        public static long power(int n, int m) {
+        long result = 1; // Start with 1 because anything to the power 0 is 1
+        for (int i = 0; i < m; i++) {
+            result *= n; // Multiply result by n, m times
+        }
+        return result;
+    }
+
+    /* Do not change code below */
+    public static void main(String[] args) {
+        final Scanner scanner = new Scanner(System.in);
+        final int n = scanner.nextInt();
+        final int m = scanner.nextInt();
+        System.out.println(power(n, m));
+    }
+}
