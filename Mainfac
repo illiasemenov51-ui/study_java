@@ -1,0 +1,28 @@
+import java.util.Scanner; // 3.1 Import necessary library for input
+
+public class Main { // 3.6 Always use 'Main' as class name
+
+    // 3.0 Main method — program execution starts here
+    public static void main(String[] args) {
+
+        // 3.2 Create a Scanner object to read input from standard input
+        Scanner scanner = new Scanner(System.in);
+
+        // 3.3 Read integer n from user input
+        int n = scanner.nextInt();
+
+        // 3.4 Initialize factorial variable with 1
+        long factorial = 1;
+
+        // 3.5 Calculate factorial using a loop
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+
+        // 3.7 Output the result to standard output
+        System.out.println(factorial);
+
+        // 3.8 Close the scanner to free resources
+        scanner.close();
+    }
+}
