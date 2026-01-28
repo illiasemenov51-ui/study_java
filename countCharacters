@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class countCharacters {
+
+    // Declare the method 'countCharacters'
+    public static int countCharacters(String inputString) {
+        return inputString.length();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine();
+
+        // Call 'countCharacters' method and print the result
+        System.out.println(countCharacters(inputString));
+
+        scanner.close();
+    }
+}
