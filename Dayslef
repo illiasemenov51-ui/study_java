@@ -1,0 +1,21 @@
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class Dayslef {
+    public static void main(String[] args) {
+
+        // date your birthday 
+        LocalDate birthDate = LocalDate.of(2005, 12, 1);
+
+        // today date whan you need 
+        LocalDate today = LocalDate.now();
+
+        //how days 
+        long days = ChronoUnit.DAYS.between(birthDate, today);
+
+        // 
+        double years = days / 365.25;
+
+        System.out.println("how days leaved from first day : " + years);
+    }
+}
