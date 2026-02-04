@@ -1,0 +1,15 @@
+ class GradeCalculator {
+    public 
+ 
+ main(String[] args) {
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        int exam1 = scanner.nextInt(), exam2 = scanner.nextInt(), finalExam = scanner.nextInt();
+        
+ average = calculateAverage(exam1, exam2, finalExam);
+        System.out.printf("Average grade: %.2f%n", average);
+    }
+    public static double calculateAverage(int exam1, int exam2, int finalExam) {
+        
+ (exam1 + exam2 + finalExam) / 3.0;
+    }
+}
